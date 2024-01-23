@@ -2,12 +2,12 @@ import java.util.Arrays;
 
 public class Sortieralgorithmus {
     public static void main(String... args) {
-        sort();
+        modulo();
         System.out.println("\n");
         selectionSort();
     }
 
-    static void sort() {
+    static void modulo() {
         for (int i = 1; i <= 35; i++) {
             if (i % 3 == 0 && i % 2 == 0) System.out.println("Zahl " + i + " ist durch 3 und 2 teilbar.");
         }
