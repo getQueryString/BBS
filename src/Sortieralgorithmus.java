@@ -16,13 +16,11 @@ public class Sortieralgorithmus {
     static void selectionSort() {
         int[] buffer = {44, 55, 12, 42, 94, 18, 6, 67};
         int anzahl = buffer.length;
-        int x, tausch;
+        int tausch;
         System.out.println("Unsortiert: " + Arrays.toString(buffer));
         for (int a = 1; a < anzahl - 1; a++) {
-            x = 0;
             for (int i = 0; i < anzahl - a; i++) {
-                if (buffer[i] > x && buffer[i] > buffer[buffer.length - a]) {
-                    x = buffer[i];
+                if (buffer[i] > buffer[buffer.length - a]) {
                     tausch = buffer[i];
                     buffer[i] = buffer[buffer.length - a];
                     buffer[buffer.length - a] = tausch;
