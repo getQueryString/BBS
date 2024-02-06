@@ -18,10 +18,12 @@ public class Exponentialfunktion {
         // Würden alle Möglichkeiten berücksichtigt, wäre der Code für die kleine Aufgabe zu komplex.
         // Siehe z. B. FdLibm.java
         double result;
-        if (y < 0) return 0.0;
-        if (y > 0.0) {
+        if (y < 0.0) return 0.0;
+        else if (y == 0) return 1.0;
+        else if (y > 0.0) {
             if (y == 0.5 && x >= -Double.MAX_VALUE) return Math.sqrt(x + 0.0);
             else {
+                y = Math.ceil(y); // y auf- bzw. abrunden
                 result = x;
                 for (int i = 0; i < y - 1.0; result *= x, i++) ;
                 return result;
